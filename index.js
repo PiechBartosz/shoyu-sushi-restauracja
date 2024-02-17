@@ -2,16 +2,19 @@ const navBtn = document.querySelector(".burger-btn");
 const navMobile = document.querySelector(".nav-mobile");
 const navItem = document.querySelectorAll(".nav-mobile__item");
 const logo = document.querySelector(".nav-mobile__logo");
-console.log(navItem);
+// console.log(navItem);
+const body = document.body;
 
 function showMenu() {
 	navMobile.classList.toggle("nav-mobile--active");
+	blockScroll();
 	logo.addEventListener("click", () => {
 		navMobile.classList.remove("nav-mobile--active");
 	});
 	navItem.forEach((item) => {
 		item.addEventListener("click", () => {
 			navMobile.classList.remove("nav-mobile--active");
+			blockScroll();
 		});
 	});
 	navhandlean();
@@ -25,6 +28,13 @@ const navhandlean = () => {
 		delaytime++;
 	});
 };
+function blockScroll() {
+	if (navMobile.classList.contains("nav-mobile--active")) {
+		body.classList.add("bodyScroll");
+	} else {
+		body.classList.remove("bodyScroll");
+	}
+}
 
 navBtn.addEventListener("click", showMenu);
 

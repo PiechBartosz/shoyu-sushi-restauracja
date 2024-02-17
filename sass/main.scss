@@ -27,6 +27,10 @@ body {
 	background-image: colors.$main-color;
 }
 
+.bodyScroll {
+	overflow: hidden;
+}
+
 .nav {
 	display: none;
 }
