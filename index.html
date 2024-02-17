@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoyu Sushi Restauracja Sushi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/20217c5f00.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./sass/main.css">
+</head>
+
+<body>
+
+    <button class="burger-btn">
+        <div class="burger-btn__box">
+            <div class="burger-btn__bars inny"></div>
+        </div>
+    </button>
+
+    <div class="nav-mobile__logo">
+        <a href="#">Shōyu<br><span class="X">Ramen & Sushi</span></a>
+
+    </div>
+    <nav class="nav-mobile">
+        <!-- nav-mobile--active -->
+        <div class="nav-mobile__items">
+            <a href="#o-nas" class="nav-mobile__item">o nas</a>
+            <a href="#menu" class="nav-mobile__item">menu</a>
+            <a href="#galeria" class="nav-mobile__item">galeria</a>
+            <a href="#kontakt" class="nav-mobile__item">kontakt</a>
+        </div>
+    </nav>
+
+
+    <!-- nav desktop -->
+    <nav class="nav">
+
+        <div class="nav__container">
+            <div>
+                <ul>
+                    <li tabindex="0"><a href="#o-nas">o nas</a></li>
+                    <li tabindex="0"><a href="#menu">menu</a></li>
+                    <li tabindex="0"><a href="#galeria">galeria</a></li>
+                    <li tabindex="0"><a href="#kontakt">kontakt</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- end desktop -->
+
+    <header>
+        <div class="header-img">
+            <div class="header-text">
+                <h1>Witamy</h1>
+                <p>I zapraszamy do naszej restauracji</p>
+            </div>
+            <div class="header-bg"></div>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="section" id="o-nas">
+            <div class="section__title">
+                <h2>O nas</h2>
+            </div>
+            <div class="wrapper">
+                <div class="about-us about-us__img">
+                    <div class="about-us__text">
+                        <p>W starożytnej Japonii na wszystkich talerzach usypywano niewielki kopczyk soli, aby każdy
+                            gość przy stole mógł sam doprawić sobie jedzenie. Koncepcja solenia własnego pożywienia -
+                            teshio ni kakeru- z czasem ewoluowała i zaczęła oznaczać "czyn pielęgnowania", czy to
+                            wychowania dziecka, sporządzania własnej pasty Miso, czy w naszym przypadku gotowania dla
+                            ludzi, którym chcemy zaoferować wiedzę, umiejętności i pasję do stworzenia wyjątkowego
+                            posiłku.
+                            Shoyu - czyli sos sojowy, to jeden z najbardziej rozpoznawalnych symboli kuchni japońskiej.
+                            Zaraz obok stoją: Sake, Mirin, Shio (sól), Su (ocet), Sato (cukier), Miso, Yuzu, Goma
+                            (sezam), Shoga (imbir). Dzięki nim marynujemy i solimy ryby, dodajemy głębi bulionom oraz
+                            doprawiamy ryż do su-shi (Ocet i Sól). Te wszystkie składniki i ich kombinacje w połączeniu
+                            z wiedzą i nutą nowoczesności pragniemy pokazać Ci na talerzu i w misce.
+                            <br>
+                            <br>
+                        <p>Do zobaczenia !</p>
+                        </p>
+                    </div>
+                    <div class="shadow"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="menu">
+            <div class="section__title">
+                <h2>menu</h2>
+            </div>
+            <div class="wrapper">
+                <div class="hero-img hero-img__menu">
+                    <div class="shadow"></div>
+                    <div class="menu">
+                        <a href="https://shoyu.upmenusite.com/">
+                            <button class="menu__btn">Zamawiam</button>
+                        </a>
+
+                        <div class="menu__phoneContact"><i class="fa-solid fa-phone icon-with-margin"></i>
+                            <a href="tel:000000000000" class="menu__phoneContactStyle">00 000 000 000</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section gallery__position" id="galeria">
+            <div class="section__title">
+                <h2>galeria</h2>
+            </div>
+            <div class="wrapper">
+                <ul class="gallery__imgs">
+                    <li class="gallery__item"><img src="./images/img1-gallery.jpg" alt="">
+                    </li>
+                    <li class="gallery__item"><img src="./images/img2-gallery.jpg" alt=""></li>
+                    <li class=" gallery__item"><img src="./images/img3-gallery.jpg" alt=""></li>
+                    <li class=" gallery__item"><img src="./images/img4-gallery.jpg" alt=""></li>
+                    <li class="gallery__item"><img src="./images/img5-gallery.jpg" alt=""></li>
+                    <li class="gallery__item"><img src="./images/img6-gallery.jpg" alt=""></li>
+                    <li class="gallery__item"><img src="./images/img7-gallery.jpg" alt=""></li>
+                    <li class="gallery__item"><img src="./images/img8-gallery.jpg" alt=""></li>
+                </ul>
+                <div class="popup hidden">
+                    <button class="popup__close">x</button>
+                    <img src="" alt="" class="popup__img">
+                    <button class="popup__arrow popup__arrow--right">> </button>
+                    <button class="popup__arrow popup__arrow--left">
+                        < </button>
+                </div>
+            </div>
+        </section>
+        <footer class="section" id="kontakt">
+            <div class="section__title">
+                <h2>kontakt</h2>
+            </div>
+            <div class="wrapper">
+                <div class="contact__position contact">
+
+                    <div>
+                        <h3>Kontakt</h3>
+                        <br>
+                        <div class="contact__address">
+                            <p>Grzybowska 90a</p>
+                            <p>00-844 Warszawa</p>
+                            <ul>
+                                <li>
+                                    <i class="fa-solid fa-phone icon-with-margin"></i>
+                                    <a href="tel:000000000000" class="phone-link">00 000 000 000</a>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-envelope icon-with-margin"></i>
+                                    <a href="mailto:ccccjd@gmiaa.com" class="email-link">kontakt@shoyu.pl</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="open-hours">
+                        <h3>Godziny otwarcia:</h3>
+                        <br>
+                        <p>Poniedziałek-Niedziela<br>12:00 - 21:00</p>
+
+
+
+                    </div>
+                </div>
+                <div class="maps-position">
+                    <iframe class="google-map"
+                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d610.8908577598789!2d20.980075928530557!3d52.23314899824191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNTLCsDEzJzU5LjMiTiAyMMKwNTgnNTAuNiJF!5e0!3m2!1spl!2spl!4v1694254831093!5m2!1spl!2spl"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

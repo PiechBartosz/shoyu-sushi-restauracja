@@ -1,0 +1,207 @@
+@use "./colors" as colors;
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.section {
+	padding: 0 2rem;
+
+	&__title {
+		font-size: 2rem;
+		margin: 4rem;
+		text-align: center;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+}
+.hero-img {
+	position: relative;
+	height: 60rem;
+	width: 100%;
+	background-position: center;
+	background-size: cover;
+
+	&__menu {
+		background-image: url("../images/menu-small.jpg");
+	}
+}
+
+.phone-link,
+.email-link {
+	color: inherit;
+	text-decoration: none;
+	transition: color 0.5s, font-size 0.5s;
+}
+
+.phone-link:hover,
+.email-link:hover {
+	font-size: 1.2rem;
+	cursor: pointer;
+	color: colors.$secondlogo;
+}
+
+.maps-position {
+	margin: 4rem 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.google-map {
+	height: 40rem;
+}
+.shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.menu {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	font-size: 22px;
+
+	&__btn {
+		width: 160px;
+		height: 40px;
+		border-radius: 8px;
+		border: none;
+		color: colors.$text;
+		background-image: colors.$main-color;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 14px;
+		cursor: pointer;
+		transition: color 0.6s, background-image 5s;
+
+		&:hover {
+			background-image: colors.$mobileMenu;
+			color: colors.$secondlogo;
+		}
+	}
+
+	&__phoneContact {
+		margin-top: 1.5rem;
+		text-align: center;
+		padding: 2rem;
+	}
+
+	&__phoneContactStyle {
+		font-size: 2rem;
+		transition: color 0.3s, font-size 0.3s;
+	}
+
+	&__phoneContactStyle:hover {
+		color: colors.$secondlogo;
+		font-size: 3rem;
+	}
+}
+
+.popup {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100vw;
+	height: 100vh;
+	left: 0;
+	top: 0;
+	backdrop-filter: blur(10px);
+	z-index: 2;
+
+	&__img {
+		max-width: 70%;
+		max-height: 70%;
+		border-radius: 8px;
+	}
+
+	&.hidden {
+		display: none;
+	}
+
+	&__close {
+		position: fixed;
+		background-color: transparent;
+		color: colors.$text;
+		border: none;
+		top: 88px;
+		right: 35px;
+		font-size: 30px;
+		height: 40px;
+		width: 40px;
+		z-index: 5000;
+		cursor: pointer;
+		opacity: 0.5;
+		transition: opacity 0.3s;
+	}
+
+	&__arrow {
+		position: absolute;
+		font-size: 16px;
+		width: 40px;
+		height: 40px;
+		cursor: pointer;
+		border-radius: 50%;
+		border: none;
+		top: 50%;
+		margin: 0 40px;
+		opacity: 0.5;
+	}
+
+	&__close:hover,
+	&__arrow:hover {
+		opacity: 1;
+	}
+
+	&__arrow--left {
+		left: 0;
+	}
+
+	&__arrow--right {
+		right: 0;
+	}
+}
+
+ul {
+	list-style: none;
+}
+
+.fa-solid {
+	margin-right: 0.5rem;
+}
+
+@media (min-width: 576px) {
+	.menu__btn {
+		width: 180px;
+		height: 60px;
+		font-size: 20px;
+	}
+
+	.google-map {
+		height: 60rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.google-map {
+		height: 60rem;
+		width: 100%;
+	}
+
+	.hero-img {
+		&__menu {
+			background-image: url("../images/Zestaw\ 6\ i\ 7-min-min.jpg");
+		}
+	}
+}

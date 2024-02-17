@@ -1,0 +1,407 @@
+@use "./colors" as colors;
+@use "./components" as components;
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+.menu a {
+	text-decoration: none;
+	color: inherit;
+	display: block;
+}
+
+html {
+	font-size: 10px;
+	color: colors.$text;
+	scroll-padding-top: 80px;
+}
+a {
+	white-space: nowrap;
+}
+
+body {
+	font-family: "Lora", serif;
+	background-image: colors.$main-color;
+}
+
+.nav {
+	display: none;
+}
+.burger-btn {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	padding: 2rem;
+	background: none;
+	border: 1px solid transparent;
+	cursor: pointer;
+	z-index: 100;
+
+	&:focus {
+		outline: none;
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		border-radius: 8px;
+	}
+
+	&__box {
+		position: relative;
+		width: 40px;
+		height: 30px;
+	}
+
+	&__bars,
+	&__bars::after,
+	&__bars::before {
+		position: absolute;
+		right: 0;
+		height: 3px;
+		content: "";
+		background-color: colors.$text;
+		transition: width 0.3s;
+	}
+
+	&__bars {
+		width: 100%;
+
+		&::after {
+			top: 13px;
+			width: 60%;
+			transition-delay: 0.3s;
+		}
+
+		&::before {
+			top: 27px;
+			width: 30%;
+		}
+	}
+}
+
+.burger-btn:hover .burger-btn__bars::after,
+.burger-btn:hover .burger-btn__bars::before {
+	width: 100%;
+}
+
+.nav-mobile {
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	transform: translateX(100%);
+	transition: 0.5s;
+	background-image: colors.$mobileMenu;
+	z-index: 99;
+
+	&--active {
+		transform: translateX(0);
+	}
+	a {
+		text-decoration: none;
+	}
+	&__item {
+		position: relative;
+		display: block;
+		margin: 0.5rem 0;
+		padding: 1.5rem 1rem;
+		color: colors.$text;
+		font-size: 1.6rem;
+		font-weight: bold;
+		text-transform: uppercase;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 3px;
+			height: 100%;
+			transform: scaleY(0);
+			background-color: colors.$text;
+			transition: transform 0.3s;
+			content: "";
+		}
+		&:hover::before {
+			transform: scaleY(1);
+		}
+	}
+
+	&__logo {
+		position: fixed;
+		top: 20px;
+		left: 20px;
+		font-family: "Anton", sans-serif;
+		display: flex;
+		flex-direction: column;
+		z-index: 100;
+	}
+
+	&__logo a {
+		position: absolute;
+		font-size: 3rem;
+		text-decoration: none;
+		color: colors.$logo;
+		font-weight: bold;
+		text-shadow: 2px 2px 5px whitesmoke;
+	}
+
+	&__logo span {
+		position: absolute;
+		top: 1rem;
+		margin: 3rem;
+		font-size: 1.2rem;
+		color: colors.$secondlogo;
+		text-shadow: none;
+	}
+}
+
+@keyframes navItemsMove {
+	from {
+		transform: translateX(200%);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+.nav-items-animation {
+	animation: navItemsMove 2s both;
+}
+
+.header-img {
+	position: relative;
+	height: 60rem;
+	background-image: url("../images/header.jpg");
+	background-position: center;
+	background-size: cover;
+}
+
+.header-bg {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.header-text {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	color: colors.$text;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.about-us {
+	position: relative;
+
+	&__img {
+		height: 60rem;
+		background-image: url("../images/about-us-min.jpg");
+		background-position: center;
+		background-size: cover;
+	}
+
+	&__text {
+		position: relative;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		z-index: 10;
+		font-size: 1.2rem;
+		padding: 2rem;
+		line-height: 1.5;
+		letter-spacing: 1.2px;
+		overflow-y: auto;
+		text-align: center;
+		z-index: 1;
+	}
+}
+
+img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+.gallery {
+	&__position {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__imgs {
+		display: flex;
+		flex-wrap: wrap;
+		list-style: none;
+		justify-content: space-evenly;
+		background: linear-gradient(rgba(96, 86, 86, 0.525), #f8b75b);
+		padding: 50px;
+		border-radius: 20px;
+	}
+
+	&__item {
+		max-height: 200px;
+		max-width: 300px;
+		margin: 20px;
+		cursor: pointer;
+		transform: scale(1);
+		transition: transform 0.3s;
+		border: 1px solid whitesmoke;
+		border-radius: 10px;
+		overflow: hidden;
+		box-shadow: 0 0 48px 1px rgba(0, 0, 0, 0.5);
+	}
+
+	&__item:hover {
+		transform: scaleX(1.1);
+	}
+}
+
+.contact {
+	&__position {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: flex-start;
+	}
+	p {
+		padding-bottom: 0.5rem;
+	}
+	ul li {
+		padding-bottom: 0.5rem;
+	}
+}
+
+@media (min-width: 576px) {
+	.header-text {
+		font-size: 1.5rem;
+
+		h1 {
+			padding: 0.5rem;
+		}
+	}
+
+	.contact__address,
+	.open-hours {
+		font-size: 1.5rem;
+	}
+
+	footer h3 {
+		font-size: 2rem;
+	}
+
+	.about-us {
+		&__text {
+			font-size: 1.6rem;
+		}
+	}
+
+	@media (min-width: 768px) {
+		h2 {
+			font-size: 4rem;
+		}
+		.about-us {
+			&__text {
+				font-size: 1.9rem;
+				padding: 4rem;
+				line-height: 1.6;
+				letter-spacing: 1.4px;
+			}
+		}
+	}
+	@media (min-width: 992px) {
+		h1 {
+			font-size: 4rem;
+		}
+		.burger-btn {
+			display: none;
+		}
+		.nav-mobile__logo {
+			z-index: 1000;
+		}
+
+		.nav-mobile {
+			display: none;
+		}
+		.nav {
+			position: sticky;
+			left: 0;
+			top: 0;
+			display: flex;
+			height: 80px;
+			padding: 20px;
+			background-color: rgba(0, 0, 0, 0.5);
+			z-index: 100;
+
+			.nav__container {
+				display: flex;
+				flex-wrap: wrap;
+				width: 100%;
+				margin: 0 auto;
+				max-width: 1200px;
+				align-items: center;
+				justify-content: space-evenly;
+
+				a {
+					padding-left: 20px;
+					text-transform: uppercase;
+					font-weight: bold;
+					transition: font-size 0.3s;
+					text-decoration: none;
+					color: colors.$text;
+				}
+			}
+
+			.logo {
+				width: 100px;
+				height: 100px;
+				font-size: 32px;
+				line-height: 100px;
+				text-align: center;
+				text-transform: uppercase;
+				text-decoration: none;
+			}
+
+			ul {
+				display: flex;
+				width: 100%;
+				justify-content: space-evenly;
+				align-items: center;
+				list-style: none;
+				font-size: 2rem;
+			}
+
+			ul li a {
+				padding-left: 20px;
+				text-transform: uppercase;
+				font-weight: bold;
+				transition: font-size 0.3s;
+			}
+
+			ul li a:hover {
+				font-size: 3rem;
+				cursor: pointer;
+			}
+		}
+
+		.about-us {
+			&__text {
+				font-size: 2rem;
+				padding: 4rem;
+				line-height: 1.6;
+				letter-spacing: 1.4px;
+			}
+		}
+	}
+}
