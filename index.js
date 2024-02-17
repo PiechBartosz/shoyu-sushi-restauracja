@@ -5,6 +5,15 @@ const logo = document.querySelector(".nav-mobile__logo");
 // console.log(navItem);
 const body = document.body;
 
+const footerYear = document.querySelector(".footer__year");
+
+const handleCurrentYear = () => {
+	const year = new Date().getFullYear();
+	footerYear.innerText = year;
+};
+
+handleCurrentYear();
+
 function showMenu() {
 	navMobile.classList.toggle("nav-mobile--active");
 	blockScroll();
