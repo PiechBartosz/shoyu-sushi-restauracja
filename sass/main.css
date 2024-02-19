@@ -258,6 +258,13 @@ body {
   overflow: hidden;
 }
 
+.logo-shoyu {
+  height: 10rem;
+  width: 100%;
+  top: 1rem;
+  left: 1rem;
+}
+
 .nav {
   display: none;
 }
