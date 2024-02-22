@@ -252,6 +252,7 @@ a {
 body {
   font-family: "Lora", serif;
   background-image: linear-gradient(to right, #000000, #254335, #274637, #325643, #102f27, #000000);
+  overscroll-behavior-y: none;
 }
 
 .bodyScroll {

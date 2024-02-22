@@ -19,6 +19,7 @@ html {
 	font-size: 10px;
 	color: colors.$text;
 	scroll-padding-top: 80px;
+	// background-color:
 }
 a {
 	white-space: nowrap;
@@ -27,6 +28,7 @@ a {
 body {
 	font-family: "Lora", serif;
 	background-image: colors.$main-color;
+	overscroll-behavior-y: none;
 }
 
 .bodyScroll {
