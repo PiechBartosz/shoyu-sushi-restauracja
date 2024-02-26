@@ -36,7 +36,6 @@ body {
 }
 
 .logo-shoyu {
-	height: 10rem;
 	width: 100%;
 	top: 1rem;
 	left: 1rem;
@@ -152,6 +151,9 @@ body {
 		display: flex;
 		flex-direction: column;
 		z-index: 100;
+	}
+	&__logo img {
+		max-width: 100px;
 	}
 
 	&__logo a {

@@ -260,7 +260,6 @@ body {
 }
 
 .logo-shoyu {
-  height: 10rem;
   width: 100%;
   top: 1rem;
   left: 1rem;
@@ -367,6 +366,9 @@ body {
   display: flex;
   flex-direction: column;
   z-index: 100;
+}
+.nav-mobile__logo img {
+  max-width: 100px;
 }
 .nav-mobile__logo a {
   position: absolute;
